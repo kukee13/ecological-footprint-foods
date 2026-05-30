@@ -139,17 +139,23 @@ const CS_TRANS = {
       },
       statsBox: {
         kicker: 'WASSER IN ZAHLEN',
-        h3: 'Was 280 Liter pro Kilo wirklich bedeuten',
+        h3: 'Was der Wasserverbrauch in Zahlen bedeutet',
+        intro: 'Für Deutschland und Spanien liegen länderspezifische Messwerte vor (321 L/kg bzw. 209 L/kg). Für die Niederlande wird der globale Durchschnittswert von 280 L/kg verwendet, da kein nationaler Messwert existiert. Die folgenden Gesamtmengen basieren auf der jeweiligen Jahresproduktion 2024.',
         stats: [
-          { val: '33,7 Mrd. L', lab: 'Deutschland 2024', sub: 'für 120.350 t Erdbeeren' },
-          { val: '90,57 Mrd. L', lab: 'Spanien 2024', sub: 'für 323.460 t Erdbeeren' },
-          { val: '24,19 Mrd. L', lab: 'Niederlande 2024 (Erntemenge NL gesamt)', sub: 'für 86.400 t Erdbeeren — davon 12.271 t Export nach Deutschland (2024)' },
-          { val: '78,4 Mrd. L', lab: 'Deutschland 2023/24', sub: 'Verbrauch inkl. importierter Erdbeeren' },
+          { val: '38,6 Mrd. L', lab: 'DEUTSCHLAND 2024', sub: '321 L/kg × 120.350 t Erdbeeren (länderspezifischer Wert)' },
+          { val: '67,6 Mrd. L', lab: 'SPANIEN 2024', sub: '209 L/kg × 323.460 t Erdbeeren (länderspezifischer Wert)' },
+          { val: '24,19 Mrd. L', lab: 'NIEDERLANDE 2024', sub: '280 L/kg × 86.400 t (Durchschnittswert, da kein länderspezifischer Wert) — davon 12.271 t Export nach Deutschland' },
+          { val: '78,4 Mrd. L', lab: 'DEUTSCHLAND 2023/24', sub: 'Verbrauch inkl. importierter Erdbeeren (280 L/kg × 280.000 t Gesamtverbrauch)' },
         ],
-        insightPre: 'Pro Kopf entspricht das in Deutschland rund',
-        insightBold: '952 Litern Wasser pro Jahr',
-        insightPost: '— allein für Erdbeeren (3,4 kg × 280 L).',
-        statSource: 'Eigene Berechnungen auf Basis von Statista (2025), WWF, Naturfreunde, BUND. Berechnung: 280 L/kg × Erntemenge bzw. Verbrauchsmenge.',
+        perKopfH3: 'Pro-Kopf-Verbrauch: Erdbeeren in der persönlichen Wasserbilanz',
+        perKopfBody: 'Im Schnitt isst jede:r Deutsche etwa 3,3 kg Erdbeeren pro Jahr (Stand 2025). Wie viel Wasser dahintersteht, hängt stark davon ab, woher die Erdbeeren kommen:',
+        perKopfRows: [
+          { icon: '🌐', label: 'Durchschnittswert (gemischte Herkunft)', val: 'ca. 924 L', calc: '3,3 kg × 280 L/kg' },
+          { icon: '🇩🇪', label: 'Nur deutsche Erdbeeren', val: 'ca. 1.059 L', calc: '3,3 kg × 321 L/kg' },
+          { icon: '🇪🇸', label: 'Nur spanische Erdbeeren', val: 'ca. 690 L', calc: '3,3 kg × 209 L/kg' },
+        ],
+        perKopfInsight: 'Bezogen auf den deutschen Gesamtverbrauch (≈280.000 t Erdbeeren pro Jahr) sind das rund 78,4 Mrd. Liter Wasser allein für den Erdbeerkonsum eines Jahres. Wichtig: Spanische Erdbeeren brauchen pro Kilo zwar weniger Wasser — aber aus belasteten Grundwasserreserven (blaues Wasser), während deutsche Erdbeeren überwiegend mit Regenwasser auskommen.',
+        statSource: 'Eigene Berechnungen mit länderspezifischen Wasserwerten (Deutschland 321 L/kg, Spanien 209 L/kg) bzw. Durchschnittswert (Niederlande 280 L/kg). Quellen: Naturfreunde.de (Rottmann, 2015), Warenvergleich.de (2020), Statista (2024), Water Footprint Network (2018). Pro-Kopf-Verbrauch: Statista (2025), BLE.',
       },
     },
     transport: {
@@ -606,17 +612,23 @@ const CS_TRANS = {
       },
       statsBox: {
         kicker: 'WATER IN NUMBERS',
-        h3: 'What 280 Litres per Kilo Really Means',
+        h3: 'What the Water Footprint Means in Numbers',
+        intro: 'Country-specific measurements are available for Germany and Spain (321 L/kg and 209 L/kg respectively). For the Netherlands the global average of 280 L/kg is used, as no national figure exists. The totals below are based on the respective 2024 production volumes.',
         stats: [
-          { val: '33.7 bn L', lab: 'Germany 2024', sub: 'for 120,350 t of strawberries' },
-          { val: '90.57 bn L', lab: 'Spain 2024', sub: 'for 323,460 t of strawberries' },
-          { val: '24.19 bn L', lab: 'Netherlands 2024 (total NL production)', sub: 'for 86,400 t of strawberries — of which 12,271 t exported to Germany (2024)' },
-          { val: '78.4 bn L', lab: 'Germany 2023/24', sub: 'Consumption incl. imported strawberries' },
+          { val: '38.6 bn L', lab: 'GERMANY 2024', sub: '321 L/kg × 120,350 t of strawberries (country-specific value)' },
+          { val: '67.6 bn L', lab: 'SPAIN 2024', sub: '209 L/kg × 323,460 t of strawberries (country-specific value)' },
+          { val: '24.19 bn L', lab: 'NETHERLANDS 2024', sub: '280 L/kg × 86,400 t (average value, no country-specific figure) — of which 12,271 t exported to Germany' },
+          { val: '78.4 bn L', lab: 'GERMANY 2023/24', sub: 'Consumption incl. imported strawberries (280 L/kg × 280,000 t total consumption)' },
         ],
-        insightPre: 'Per capita in Germany that equates to around',
-        insightBold: '952 litres of water per year',
-        insightPost: '— for strawberries alone (3.4 kg × 280 L).',
-        statSource: 'Own calculations based on Statista (2025), WWF, Naturfreunde, BUND. Calculation: 280 L/kg × harvest / consumption volume.',
+        perKopfH3: 'Per-Capita Consumption: Strawberries in Your Personal Water Footprint',
+        perKopfBody: 'On average, each person in Germany eats about 3.3 kg of strawberries per year (as of 2025). How much water that represents depends heavily on where the strawberries come from:',
+        perKopfRows: [
+          { icon: '🌐', label: 'Average value (mixed origin)', val: 'ca. 924 L', calc: '3.3 kg × 280 L/kg' },
+          { icon: '🇩🇪', label: 'German strawberries only', val: 'ca. 1,059 L', calc: '3.3 kg × 321 L/kg' },
+          { icon: '🇪🇸', label: 'Spanish strawberries only', val: 'ca. 690 L', calc: '3.3 kg × 209 L/kg' },
+        ],
+        perKopfInsight: 'Based on total German consumption (≈280,000 t strawberries per year), that is around 78.4 billion litres of water for strawberry consumption alone in a single year. Important: Spanish strawberries need less water per kilo — but from stressed groundwater reserves (blue water), while German strawberries are predominantly rain-fed (green water).',
+        statSource: 'Own calculations using country-specific water values (Germany 321 L/kg, Spain 209 L/kg) and average value (Netherlands 280 L/kg). Sources: Naturfreunde.de (Rottmann, 2015), Warenvergleich.de (2020), Statista (2024), Water Footprint Network (2018). Per-capita consumption: Statista (2025), BLE.',
       },
     },
     transport: {
@@ -1744,7 +1756,8 @@ export default function ErdbeereCaseStudyPage() {
         {/* Wasser in Zahlen */}
         <div className="bg-alabaster rounded-[2rem] border border-black/5 p-8 md:p-10 mb-10">
           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-sky-600 mb-4">{t.water.statsBox.kicker}</p>
-          <h3 className="text-2xl font-serif font-black text-charcoal mb-8">{t.water.statsBox.h3}</h3>
+          <h3 className="text-2xl font-serif font-black text-charcoal mb-4">{t.water.statsBox.h3}</h3>
+          <p className="text-sm text-charcoal/70 leading-relaxed mb-8">{t.water.statsBox.intro}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-8">
             {t.water.statsBox.stats.map((s, i) => (
               <div key={i} className="bg-white rounded-2xl p-5 border border-black/5 shadow-sm">
@@ -1754,12 +1767,22 @@ export default function ErdbeereCaseStudyPage() {
               </div>
             ))}
           </div>
-          <p className="text-base font-serif italic text-charcoal/70 leading-relaxed">
-            {t.water.statsBox.insightPre}{' '}
-            <strong className="not-italic font-black text-sky-600">{t.water.statsBox.insightBold}</strong>
-            {' '}{t.water.statsBox.insightPost}
-          </p>
-          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-charcoal/30 mt-4">{t.water.statsBox.statSource}</p>
+          <div className="border-t border-black/5 pt-6">
+            <h4 className="text-lg font-serif font-black text-charcoal mb-2">{t.water.statsBox.perKopfH3}</h4>
+            <p className="text-sm text-charcoal/70 leading-relaxed mb-5">{t.water.statsBox.perKopfBody}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+              {t.water.statsBox.perKopfRows.map((r, i) => (
+                <div key={i} className="bg-white rounded-2xl p-4 border border-black/5 shadow-sm">
+                  <p className="text-xl mb-1">{r.icon}</p>
+                  <p className="text-xs font-black uppercase tracking-wide text-charcoal/50 mb-1">{r.label}</p>
+                  <p className="text-xl font-serif font-black text-sky-600">{r.val}</p>
+                  <p className="text-xs text-charcoal/40 mt-0.5">{r.calc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm font-serif italic text-charcoal/70 leading-relaxed">{t.water.statsBox.perKopfInsight}</p>
+          </div>
+          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-charcoal/30 mt-6">{t.water.statsBox.statSource}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-sky-50 border border-sky-100 rounded-[1.5rem] p-8">

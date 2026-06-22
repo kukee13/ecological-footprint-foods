@@ -1054,8 +1054,8 @@ interface BarDatum {
   highlighted?: boolean;
 }
 
-function HorizontalBars({ data, max, unit, decimals = 1, ariaLabel }: {
-  data: BarDatum[]; max: number; unit?: string; decimals?: number; ariaLabel: string;
+function HorizontalBars({ data, max, unit, decimals = 1, ariaLabel, locale }: {
+  data: BarDatum[]; max: number; unit?: string; decimals?: number; ariaLabel: string; locale?: string;
 }) {
   return (
     <div role="img" aria-label={ariaLabel} className="w-full space-y-6">
@@ -1069,7 +1069,7 @@ function HorizontalBars({ data, max, unit, decimals = 1, ariaLabel }: {
                 {d.sublabel && <p className="text-[10px] font-black uppercase tracking-[0.2em] text-charcoal/30 mt-0.5">{d.sublabel}</p>}
               </div>
               <p className={cn('text-2xl font-serif font-black tabular-nums', d.highlighted ? 'text-accent-warning' : 'text-charcoal')}>
-                {d.value.toFixed(decimals)}{unit && <span className="text-xs font-normal text-charcoal/40 ml-1">{unit}</span>}
+                {locale ? d.value.toLocaleString(locale, { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) : d.value.toFixed(decimals)}{unit && <span className="text-xs font-normal text-charcoal/40 ml-1">{unit}</span>}
               </p>
             </div>
             <div className="h-3 w-full bg-black/5 rounded-full overflow-hidden">
@@ -1876,7 +1876,7 @@ export default function ErdbeereCaseStudyPage() {
         </div>
         <div className="bg-white rounded-[2rem] border border-black/5 shadow-sm p-8 md:p-10 mb-10">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/30 mb-8">{t.transport.chartLabel}</p>
-          <HorizontalBars data={transportBars} max={21000} unit={lang === 'DE' ? 't/Jahr' : 't/year'} decimals={0} ariaLabel={t.transport.chartLabel} />
+          <HorizontalBars data={transportBars} max={21000} unit={lang === 'DE' ? 't/Jahr' : 't/year'} decimals={0} locale="de-DE" ariaLabel={t.transport.chartLabel} />
         </div>
         <div className="overflow-x-auto rounded-[2rem] border border-black/5 bg-white shadow-sm">
           <table className="w-full text-left text-sm">

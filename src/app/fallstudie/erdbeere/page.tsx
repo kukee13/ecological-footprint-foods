@@ -49,7 +49,7 @@ const CS_TRANS = {
         season: 'ganzjährig (Hightech-Gewächshaus)',
         cultivation: 'Hightech-Gewächshaus mit Geothermie',
         co2: '1,64 kg/kg',
-        water: '~280 L/kg (Durchschnittswert)',
+        water: '169 L/kg (Mekonnen & Hoekstra 2010)',
         transport: 'NL → NRW, ~250 km',
         price: '5 – 10 €/kg',
         quote: 'Technik senkt Energie — aber nicht genug',
@@ -60,7 +60,7 @@ const CS_TRANS = {
       source: 'ISG M15 Präsentation (Folien 10–14), Frankfurt UAS; BMEL-Statistik 2025; Statista 2025',
       de: {
         blocks: [
-          { title: '', bullets: ['Anbaufläche: ca. 10.640 Hektar Freiland (2025)', 'Saison: Mai/Juni bis August/September', 'Ernte: fast ausschließlich per Hand'] },
+          { title: '', bullets: ['Anbaufläche: ca. 10.640 Hektar Freiland (2025)', 'Saison: Mai/Juni bis August/September', 'Ernte: fast ausschließlich per Hand', 'Häufigste Sorte: »Elsanta« — hohe Erträge, gute Lager- und Transporteigenschaften', 'Rund 85 % der Ernte stammt aus Freilandanbau, nur ca. 2,7 % der Anbaufläche wird ökologisch bewirtschaftet'] },
           { title: 'Hauptanbaugebiete', bullets: ['Niedersachsen', 'Baden-Württemberg', 'Nordrhein-Westfalen'] },
           { title: 'Freilandanbau', bullets: ['Stark witterungsabhängig', 'Erträge ca. 10 t/ha', 'Anbaufläche geht seit Jahren zurück'] },
           { title: 'Geschützter Anbau (Folie/Gewächshaus)', bullets: ['Erträge mehr als doppelt so hoch (ca. 23 t/ha) — deshalb wirtschaftlich attraktiver', 'Vorteil: frühere und längere Ernte, weniger Pflanzenschutzmittel nötig', 'Nachteil: Plastikfolien → Lösung: kompostierbare Folien aus nachwachsenden Rohstoffen (bereits in ökologischen Betrieben)'] },
@@ -104,9 +104,12 @@ const CS_TRANS = {
       h2: 'Wasserverbrauch: Es kommt auf die Art an',
       lead: 'Erdbeeren bestehen zu 90 % aus Wasser — doch noch mehr Wasser braucht ihr Anbau. Im Durchschnitt sind das 280 Liter pro Kilo. Entscheidend ist aber nicht nur die Menge, sondern die Art des Wassers: „grünes Wasser" stammt aus Niederschlägen, „blaues Wasser" aus Bewässerungsanlagen und Grundwasserreserven.',
       leadBold: '280 Liter pro Kilo',
+      grauWasserPara: 'Hinzu kommt drittens das »graue Wasser« — die Menge Süßwasser, die nötig ist, um durch Dünger oder andere Stoffe verschmutztes Wasser wieder auf Qualitätsstandard zu bringen. In den Niederlanden werden alle drei Wasserarten etwa gleichmäßig genutzt, und das verdunstete Wasser im Gewächshaus wird automatisch recycelt.',
+      grauWasserSource: 'Hoekstra (2017); Mekonnen & Hoekstra (2010)',
       chartLabel: 'Liter Wasser pro kg',
       chartNote: 'Weniger Liter bedeutet hier nicht automatisch besser — die Herkunft des Wassers ist entscheidend.',
       bars: [
+        { label: 'Niederlande', sublabel: 'Hightech-Gewächshaus (recyceltes Wasser)' },
         { label: 'Spanien', sublabel: 'blaues Wasser (Grundwasser)' },
         { label: 'Global Ø', sublabel: 'Mittelwert' },
         { label: 'Deutschland', sublabel: 'grünes Wasser (Regen)' },
@@ -118,7 +121,7 @@ const CS_TRANS = {
       box3Title: '⚠️ Arbeitsbedingungen in Spanien',
       box3Body: 'Neben dem ökologischen Problem des Doñana-Nationalparks wird der spanische Erdbeeranbau regelmäßig wegen der Arbeitsbedingungen der Erntehelfer:innen kritisiert. Die Arbeit auf den Folienplantagen ist körperlich anspruchsvoll, die Löhne oft gering und Wohnverhältnisse auf dem Feld mangelhaft. Der günstige Preis spanischer Erdbeeren hat also nicht nur ökologische, sondern auch soziale Kosten.',
       source: 'Quellen: BUND, Naturfreunde, WWF, Water Footprint Network, taten-statt-worte.ch; BUND, Utopia (Arbeitsbedingungen)',
-      nlWaterNote: '* Für die Niederlande liegt kein länderspezifischer Messwert vor. Der globale Durchschnittswert von 280 L/kg (Water Footprint Network, 2018) wird als Näherungswert verwendet.',
+      nlWaterNote: '* Wasserwerte pro kg nach Mekonnen & Hoekstra (2010): Deutschland 321 L/kg, Spanien 209 L/kg, Niederlande 169 L/kg. In der niederländischen Gewächshausproduktion wird verdunstetes Wasser teilweise automatisch recycelt und zur erneuten Bewässerung genutzt.',
       waterSplit: {
         h3: 'Anbauweise bestimmt den Wasserverbrauch',
         body: 'Der Wasserverbrauch hängt nicht nur vom Land ab, sondern stark von der Anbauweise. Freilandanbau nutzt überwiegend Regenwasser, Gewächshaus- und Folienanbau benötigt deutlich mehr aktive Bewässerung.',
@@ -140,11 +143,11 @@ const CS_TRANS = {
       statsBox: {
         kicker: 'WASSER IN ZAHLEN',
         h3: 'Was der Wasserverbrauch in Zahlen bedeutet',
-        intro: 'Für Deutschland und Spanien liegen länderspezifische Messwerte vor (321 L/kg bzw. 209 L/kg). Für die Niederlande wird der globale Durchschnittswert von 280 L/kg verwendet, da kein nationaler Messwert existiert. Die folgenden Gesamtmengen basieren auf der jeweiligen Jahresproduktion 2024.',
+        intro: 'Für Deutschland, Spanien und die Niederlande liegen länderspezifische Messwerte vor (321 L/kg, 209 L/kg bzw. 169 L/kg nach Mekonnen & Hoekstra 2010). Die folgenden Gesamtmengen basieren auf der jeweiligen Jahresproduktion 2024.',
         stats: [
           { val: '38,6 Mrd. L', lab: 'DEUTSCHLAND 2024', sub: '321 L/kg × 120.350 t Erdbeeren (länderspezifischer Wert)' },
           { val: '67,6 Mrd. L', lab: 'SPANIEN 2024', sub: '209 L/kg × 323.460 t Erdbeeren (länderspezifischer Wert)' },
-          { val: '24,19 Mrd. L', lab: 'NIEDERLANDE 2024', sub: '280 L/kg × 86.400 t (Durchschnittswert, da kein länderspezifischer Wert) — davon 12.271 t Export nach Deutschland' },
+          { val: '~15 Mrd. L', lab: 'NIEDERLANDE 2024', sub: '169 L/kg × 86.400 t Erntemenge — davon 12.271 t Export nach Deutschland (2024)' },
           { val: '78,4 Mrd. L', lab: 'DEUTSCHLAND 2023/24', sub: 'Verbrauch inkl. importierter Erdbeeren (280 L/kg × 280.000 t Gesamtverbrauch)' },
         ],
         perKopfH3: 'Pro-Kopf-Verbrauch: Erdbeeren in der persönlichen Wasserbilanz',
@@ -153,9 +156,10 @@ const CS_TRANS = {
           { icon: '🌐', label: 'Durchschnittswert (gemischte Herkunft)', val: 'ca. 924 L', calc: '3,3 kg × 280 L/kg' },
           { icon: '🇩🇪', label: 'Nur deutsche Erdbeeren', val: 'ca. 1.059 L', calc: '3,3 kg × 321 L/kg' },
           { icon: '🇪🇸', label: 'Nur spanische Erdbeeren', val: 'ca. 690 L', calc: '3,3 kg × 209 L/kg' },
+          { icon: '🇳🇱', label: 'Nur niederländische Erdbeeren', val: 'ca. 558 L', calc: '3,3 kg × 169 L/kg' },
         ],
         perKopfInsight: 'Bezogen auf den deutschen Gesamtverbrauch (≈280.000 t Erdbeeren pro Jahr) sind das rund 78,4 Mrd. Liter Wasser allein für den Erdbeerkonsum eines Jahres. Wichtig: Spanische Erdbeeren brauchen pro Kilo zwar weniger Wasser — aber aus belasteten Grundwasserreserven (blaues Wasser), während deutsche Erdbeeren überwiegend mit Regenwasser auskommen.',
-        statSource: 'Eigene Berechnungen mit länderspezifischen Wasserwerten (Deutschland 321 L/kg, Spanien 209 L/kg) bzw. Durchschnittswert (Niederlande 280 L/kg). Quellen: Naturfreunde.de (Rottmann, 2015), Warenvergleich.de (2020), Statista (2024), Water Footprint Network (2018). Pro-Kopf-Verbrauch: Statista (2025), BLE.',
+        statSource: 'Eigene Berechnungen mit länderspezifischen Wasserwerten (Deutschland 321 L/kg, Spanien 209 L/kg, Niederlande 169 L/kg nach Mekonnen & Hoekstra 2010). Quellen: Naturfreunde.de (Rottmann, 2015), Warenvergleich.de (2020), Statista (2024). Pro-Kopf-Verbrauch: Statista (2025), BLE.',
       },
     },
     transport: {
@@ -173,6 +177,12 @@ const CS_TRANS = {
       tableNote: '* Importmengen: UN Comtrade / WITS, vollständige Jahresdaten 2024. Für 2025 liegen noch keine vollständigen Daten vor.',
       truckH3: 'Warum (fast) immer der Kühl-LKW?',
       truckLead: 'Frische Erdbeeren sind kurzlebig, druckempfindlich und brauchen eine durchgängige Kühlkette. Andere Transportmittel sind technisch möglich, spielen aber bei Erdbeeren kaum eine Rolle.',
+      coldChainTitle: 'Die durchgehende Kühlkette (Cold Chain)',
+      coldChainLead: 'Erdbeeren müssen von der Ernte bis zum Verkauf durchgehend gekühlt bleiben:',
+      coldChainFlow: ['Vorkühlen nach Ernte', 'gekühlte Lagerung', 'gekühlter Transport', 'gekühltes Supermarkt-Lager', 'gekühlte Verkaufsfläche'],
+      wasteTitle: '⚠️ Lebensmittelverschwendung als Logistikproblem',
+      wasteBody: 'Wenn Erdbeeren auf dem Transport verderben, wurden alle investierten Emissionen und Ressourcen umsonst aufgewendet. Das verschlechtert den CO₂-Fußabdruck indirekt, weil am Ende kein Nutzen entsteht. Gerade bei der kurzen Haltbarkeit von Erdbeeren ist Verderb ein relevanter Faktor.',
+      wasteSource: 'Wageningen University & Research — The Strawberry Chain',
       source: 'Quellen: WITS/UN Comtrade, BMEL, Thünen-Institut, REWE PCF, EcoTransIT, GHG Protocol, UK DESNZ (Conversion Factors 2025), IRU',
     },
     season: {
@@ -262,14 +272,14 @@ const CS_TRANS = {
       chartC: 'Anbaufläche von Erdbeeren in Deutschland 2012–2024 (in 1.000 Hektar)',
       chartCSource: 'Quelle: Statista (2025), Statistisches Bundesamt',
       chartD: 'Erntemenge in Deutschland 2024 nach Anbauweise',
-      chartDCaption: 'Der Anteil des geschützten Anbaus steigt — die Erträge dort sind mehr als doppelt so hoch wie im Freiland (≈23 t/ha vs. ≈10 t/ha).',
-      chartDSource: 'Quelle: Statista (2025), BMEL',
+      chartDCaption: 'Rund 85 % der Ernte stammt aus dem Freiland. Der Anteil des geschützten Anbaus steigt langsam — dort sind die Erträge mehr als doppelt so hoch (≈23 t/ha vs. ≈10 t/ha).',
+      chartDSource: 'BZfE (2024/2026); Statistisches Bundesamt',
       chartE: 'Pro-Kopf-Verbrauch von Erdbeeren in Deutschland (kg pro Jahr)',
       chartECaption: 'Der Konsum schwankt zwischen 3,3 und 4,0 kg pro Kopf — Erdbeeren bleiben beliebt, trotz schrumpfender Anbaufläche.',
       chartESource: 'Quelle: Statista (2025), BLE',
       donutLabel: 'Freiland',
-      donutSeg1: 'Freiland — 78.600 t (65 %)',
-      donutSeg2: 'Geschützter Anbau — 41.750 t (35 %)',
+      donutSeg1: 'Freiland — ~85 %',
+      donutSeg2: 'Geschützter Anbau — ~15 %',
       summaryBadge: 'Was die Zahlen zeigen',
       summaryBody: 'Deutschland produziert nur etwa 39 % seines Erdbeerbedarfs selbst — und der heimische Anbau geht zurück. Gleichzeitig steigt der Anteil des geschützten Anbaus (Folie/Glas), der zwar ertragreicher, aber auch energieintensiver ist. Die Lücke füllen Importe — vor allem aus Spanien.',
       summaryBold: '39 % seines Erdbeerbedarfs',
@@ -376,7 +386,7 @@ const CS_TRANS = {
           { score: 'MEDIUM', val: '321 L (grün)' },
           { score: 'MEDIUM', val: '321 L (grün)' },
           { score: 'GOOD', val: '209 L (blau)' },
-          { score: 'MEDIUM', val: '280 L' },
+          { score: 'MEDIUM', val: '169 L' },
         ]},
         { dim: 'Wasserqualität', cells: [
           { score: 'GOOD', val: 'Regenwasser' },
@@ -410,6 +420,22 @@ const CS_TRANS = {
       ],
       erkBadge: 'Erkenntnis',
       source: 'ISG M15 Präsentation (Gliederung Punkt 8), CO₂-Ausstoß-Daten, Transportwege Erdbeeren, Wasserverbrauchsanalyse, Produktionskosten-Daten',
+    },
+    bwlEinordnung: {
+      badge: 'BETRIEBSWIRTSCHAFTLICHE EINORDNUNG',
+      h2: 'Was bedeuten die Ergebnisse für Unternehmen?',
+      intro: 'Die ökologischen Unterschiede zwischen den Anbauländern sind nicht nur für Verbraucher relevant, sondern auch für Unternehmen entlang der Lieferkette. Sie bilden die Grundlage für nachhaltige Beschaffungs- und Managemententscheidungen.',
+      ergebnisLabel: 'Ergebnis',
+      bedeutungLabel: 'Bedeutung für Unternehmen',
+      cards: [
+        { ergebnis: 'Unterschiede bei Wasserverbrauch, CO₂ und Energieeinsatz', bedeutung: 'Grundlage für Green Controlling und nachhaltige Beschaffungsentscheidungen' },
+        { ergebnis: 'Verbraucher achten zunehmend auf Herkunft und Nachhaltigkeit', bedeutung: 'Transparenz und Herkunftskennzeichnung als Bestandteil von Corporate Social Responsibility (CSR)' },
+        { ergebnis: 'Spanien kostengünstig, Deutschland klimafreundlicher', bedeutung: 'Zielkonflikt zwischen Wirtschaftlichkeit und Nachhaltigkeit' },
+        { ergebnis: 'Keine Produktionsform ist in allen Nachhaltigkeitsdimensionen überlegen', bedeutung: 'Beschaffungsentscheidungen erfordern die Abwägung ökologischer und wirtschaftlicher Ziele' },
+      ],
+      fazitTitle: 'Fazit',
+      fazitBody: 'Die Analyse zeigt, dass die wirtschaftlich günstigste Option nicht automatisch die nachhaltigste ist. Unternehmen müssen ökologische, wirtschaftliche und soziale Aspekte gemeinsam berücksichtigen.',
+      source: 'Betriebswirtschaftliche Einordnung — ISG M15, Frankfurt UAS',
     },
     vorteile: {
       badge: 'VERGLEICH',
@@ -522,7 +548,7 @@ const CS_TRANS = {
         season: 'Year-round (high-tech greenhouse)',
         cultivation: 'High-tech greenhouse with geothermal',
         co2: '1.64 kg/kg',
-        water: '~280 L/kg (average)',
+        water: '169 L/kg (Mekonnen & Hoekstra 2010)',
         transport: 'NL → NRW, ~250 km',
         price: '€5 – 10/kg',
         quote: 'Technology reduces energy — but not enough',
@@ -533,7 +559,7 @@ const CS_TRANS = {
       source: 'ISG M15 Presentation (Slides 10–14), Frankfurt UAS; BMEL Statistics 2025; Statista 2025',
       de: {
         blocks: [
-          { title: '', bullets: ['Cultivation area: approx. 10,640 ha open field (2025)', 'Season: May/June to August/September', 'Harvest: almost exclusively by hand'] },
+          { title: '', bullets: ['Cultivation area: approx. 10,640 ha open field (2025)', 'Season: May/June to August/September', 'Harvest: almost exclusively by hand', 'Most common variety: "Elsanta" — high yields, good storage and transport characteristics', 'Around 85% of the harvest comes from open-field growing, with only approx. 2.7% of the cultivation area organically managed'] },
           { title: 'Main growing regions', bullets: ['Lower Saxony', 'Baden-Württemberg', 'North Rhine-Westphalia'] },
           { title: 'Open-field growing', bullets: ['Highly weather-dependent', 'Yields approx. 10 t/ha', 'Cultivation area has been declining for years'] },
           { title: 'Protected growing (polytunnel/greenhouse)', bullets: ['Yields more than double (approx. 23 t/ha) — hence economically more attractive', 'Advantage: earlier and longer harvest, fewer pesticides needed', 'Disadvantage: plastic film → solution: compostable films from renewable raw materials (already used by organic farms)'] },
@@ -577,9 +603,12 @@ const CS_TRANS = {
       h2: 'Water Usage: What Matters Is the Type',
       lead: 'Strawberries are 90% water — yet growing them requires even more. On average, that\'s 280 litres per kilo. What matters is not only the quantity, but the type of water: "green water" comes from rainfall, "blue water" from irrigation systems and groundwater reserves.',
       leadBold: '280 litres per kilo',
+      grauWasserPara: 'A third type also matters: "grey water" — the volume of freshwater needed to dilute water that has been polluted by fertilisers or other substances back to quality standards. In the Netherlands all three water types are used in roughly equal proportions, and evaporated water inside the greenhouse is automatically recycled.',
+      grauWasserSource: 'Hoekstra (2017); Mekonnen & Hoekstra (2010)',
       chartLabel: 'Litres of water per kg',
       chartNote: 'Fewer litres does not automatically mean better — the source of the water is what matters.',
       bars: [
+        { label: 'Netherlands', sublabel: 'high-tech greenhouse (recycled water)' },
         { label: 'Spain', sublabel: 'blue water (groundwater)' },
         { label: 'Global avg.', sublabel: 'average' },
         { label: 'Germany', sublabel: 'green water (rainfall)' },
@@ -591,7 +620,7 @@ const CS_TRANS = {
       box3Title: '⚠️ Working Conditions in Spain',
       box3Body: 'Alongside the ecological problem of Doñana National Park, Spanish strawberry growing is regularly criticised for the working conditions of harvest workers. Work on the polytunnel plantations is physically demanding, wages are often low and on-farm housing is frequently inadequate. The low price of Spanish strawberries therefore carries not only ecological but also social costs.',
       source: 'Sources: BUND, Naturfreunde, WWF, Water Footprint Network, taten-statt-worte.ch; BUND, Utopia (working conditions)',
-      nlWaterNote: '* No country-specific measurement is available for the Netherlands. The global average of 280 L/kg (Water Footprint Network, 2018) is used as an approximation.',
+      nlWaterNote: '* Water values per kg according to Mekonnen & Hoekstra (2010): Germany 321 L/kg, Spain 209 L/kg, Netherlands 169 L/kg. In Dutch greenhouse production, evaporated water is partially recycled automatically and reused for irrigation.',
       waterSplit: {
         h3: 'Cultivation method determines water use',
         body: 'Water consumption depends not only on the country but strongly on the cultivation method. Open-field growing uses mainly rainwater; greenhouse and polytunnel growing requires significantly more active irrigation.',
@@ -613,11 +642,11 @@ const CS_TRANS = {
       statsBox: {
         kicker: 'WATER IN NUMBERS',
         h3: 'What the Water Footprint Means in Numbers',
-        intro: 'Country-specific measurements are available for Germany and Spain (321 L/kg and 209 L/kg respectively). For the Netherlands the global average of 280 L/kg is used, as no national figure exists. The totals below are based on the respective 2024 production volumes.',
+        intro: 'Country-specific measurements are available for Germany, Spain and the Netherlands (321 L/kg, 209 L/kg and 169 L/kg respectively, per Mekonnen & Hoekstra 2010). The totals below are based on the respective 2024 production volumes.',
         stats: [
           { val: '38.6 bn L', lab: 'GERMANY 2024', sub: '321 L/kg × 120,350 t of strawberries (country-specific value)' },
           { val: '67.6 bn L', lab: 'SPAIN 2024', sub: '209 L/kg × 323,460 t of strawberries (country-specific value)' },
-          { val: '24.19 bn L', lab: 'NETHERLANDS 2024', sub: '280 L/kg × 86,400 t (average value, no country-specific figure) — of which 12,271 t exported to Germany' },
+          { val: '~15 bn L', lab: 'NETHERLANDS 2024', sub: '169 L/kg × 86,400 t harvest — of which 12,271 t exported to Germany (2024)' },
           { val: '78.4 bn L', lab: 'GERMANY 2023/24', sub: 'Consumption incl. imported strawberries (280 L/kg × 280,000 t total consumption)' },
         ],
         perKopfH3: 'Per-Capita Consumption: Strawberries in Your Personal Water Footprint',
@@ -626,9 +655,10 @@ const CS_TRANS = {
           { icon: '🌐', label: 'Average value (mixed origin)', val: 'ca. 924 L', calc: '3.3 kg × 280 L/kg' },
           { icon: '🇩🇪', label: 'German strawberries only', val: 'ca. 1,059 L', calc: '3.3 kg × 321 L/kg' },
           { icon: '🇪🇸', label: 'Spanish strawberries only', val: 'ca. 690 L', calc: '3.3 kg × 209 L/kg' },
+          { icon: '🇳🇱', label: 'Dutch strawberries only', val: 'ca. 558 L', calc: '3.3 kg × 169 L/kg' },
         ],
         perKopfInsight: 'Based on total German consumption (≈280,000 t strawberries per year), that is around 78.4 billion litres of water for strawberry consumption alone in a single year. Important: Spanish strawberries need less water per kilo — but from stressed groundwater reserves (blue water), while German strawberries are predominantly rain-fed (green water).',
-        statSource: 'Own calculations using country-specific water values (Germany 321 L/kg, Spain 209 L/kg) and average value (Netherlands 280 L/kg). Sources: Naturfreunde.de (Rottmann, 2015), Warenvergleich.de (2020), Statista (2024), Water Footprint Network (2018). Per-capita consumption: Statista (2025), BLE.',
+        statSource: 'Own calculations using country-specific water values (Germany 321 L/kg, Spain 209 L/kg, Netherlands 169 L/kg per Mekonnen & Hoekstra 2010). Sources: Naturfreunde.de (Rottmann, 2015), Warenvergleich.de (2020), Statista (2024). Per-capita consumption: Statista (2025), BLE.',
       },
     },
     transport: {
@@ -646,6 +676,12 @@ const CS_TRANS = {
       tableNote: '* Import volumes: UN Comtrade / WITS, complete annual data 2024. Complete 2025 data is not yet available.',
       truckH3: 'Why refrigerated trucks (almost) every time?',
       truckLead: 'Fresh strawberries are perishable, pressure-sensitive and require an unbroken cold chain. Other transport modes are technically possible but play almost no role for strawberries.',
+      coldChainTitle: 'The Unbroken Cold Chain',
+      coldChainLead: 'Strawberries must remain refrigerated continuously from harvest to point of sale:',
+      coldChainFlow: ['Pre-cooling after harvest', 'refrigerated storage', 'refrigerated transport', 'refrigerated warehouse at supermarket', 'refrigerated retail floor'],
+      wasteTitle: '⚠️ Food Waste as a Logistics Problem',
+      wasteBody: 'When strawberries spoil during transport, all the emissions and resources invested have been wasted. This indirectly worsens the carbon footprint because no benefit is generated in the end. Given the short shelf life of strawberries, spoilage is a relevant factor.',
+      wasteSource: 'Wageningen University & Research — The Strawberry Chain',
       source: 'Sources: WITS/UN Comtrade, BMEL, Thünen Institute, REWE PCF, EcoTransIT, GHG Protocol, UK DESNZ (Conversion Factors 2025), IRU',
     },
     season: {
@@ -735,14 +771,14 @@ const CS_TRANS = {
       chartC: 'Strawberry Cultivation Area in Germany 2012–2024 (in 1,000 hectares)',
       chartCSource: 'Source: Statista (2025), Federal Statistical Office',
       chartD: 'German Harvest 2024 by Cultivation Method',
-      chartDCaption: 'The share of protected cultivation is rising — yields there are more than double those of open-field growing (≈23 t/ha vs. ≈10 t/ha).',
-      chartDSource: 'Source: Statista (2025), BMEL',
+      chartDCaption: 'Around 85% of the harvest comes from open-field growing. The share of protected cultivation is rising slowly — yields there are more than double (≈23 t/ha vs. ≈10 t/ha).',
+      chartDSource: 'BZfE (2024/2026); Federal Statistical Office',
       chartE: 'Per-Capita Strawberry Consumption in Germany (kg per year)',
       chartECaption: 'Consumption fluctuates between 3.3 and 4.0 kg per capita — strawberries remain popular despite shrinking domestic acreage.',
       chartESource: 'Source: Statista (2025), BLE',
       donutLabel: 'Open field',
-      donutSeg1: 'Open field — 78,600 t (65%)',
-      donutSeg2: 'Protected cultivation — 41,750 t (35%)',
+      donutSeg1: 'Open field — ~85%',
+      donutSeg2: 'Protected cultivation — ~15%',
       summaryBadge: 'What the numbers show',
       summaryBody: 'Germany produces only around 39% of its strawberry needs domestically — and domestic cultivation is declining. At the same time, the share of protected (polytunnel/glass) growing is rising; it is more productive but also more energy-intensive. The gap is filled by imports — above all from Spain.',
       summaryBold: '39% of its strawberry needs',
@@ -849,7 +885,7 @@ const CS_TRANS = {
           { score: 'MEDIUM', val: '321 L (green)' },
           { score: 'MEDIUM', val: '321 L (green)' },
           { score: 'GOOD', val: '209 L (blue)' },
-          { score: 'MEDIUM', val: '280 L' },
+          { score: 'MEDIUM', val: '169 L' },
         ]},
         { dim: 'Water quality', cells: [
           { score: 'GOOD', val: 'Rainwater' },
@@ -883,6 +919,22 @@ const CS_TRANS = {
       ],
       erkBadge: 'Key Finding',
       source: 'ISG M15 Presentation (Outline item 8), CO₂ emissions data, Strawberry transport routes, Water use analysis, Production cost data',
+    },
+    bwlEinordnung: {
+      badge: 'BUSINESS CONTEXT',
+      h2: 'What Do the Findings Mean for Businesses?',
+      intro: 'The ecological differences between growing countries are not only relevant for consumers, but also for companies along the supply chain. They form the basis for sustainable procurement and management decisions.',
+      ergebnisLabel: 'Finding',
+      bedeutungLabel: 'Business Implication',
+      cards: [
+        { ergebnis: 'Differences in water use, CO₂ and energy input', bedeutung: 'Foundation for green controlling and sustainable procurement decisions' },
+        { ergebnis: 'Consumers are increasingly aware of origin and sustainability', bedeutung: 'Transparency and origin labelling as part of Corporate Social Responsibility (CSR)' },
+        { ergebnis: 'Spain is cheaper, Germany more climate-friendly', bedeutung: 'Trade-off between economic efficiency and sustainability' },
+        { ergebnis: 'No production method is superior across all sustainability dimensions', bedeutung: 'Procurement decisions require weighing ecological and economic goals' },
+      ],
+      fazitTitle: 'Key Finding',
+      fazitBody: 'The analysis shows that the most economically efficient option is not automatically the most sustainable. Companies must consider ecological, economic and social aspects together.',
+      source: 'Business Context — ISG M15, Frankfurt UAS',
     },
     vorteile: {
       badge: 'COMPARISON',
@@ -1390,9 +1442,10 @@ export default function ErdbeereCaseStudyPage() {
   ];
 
   const waterBars: BarDatum[] = [
-    { label: t.water.bars[0].label, value: 209, sublabel: t.water.bars[0].sublabel, color: '#2563EB' },
-    { label: t.water.bars[1].label, value: 280, sublabel: t.water.bars[1].sublabel, color: '#9CA3AF' },
-    { label: t.water.bars[2].label, value: 321, sublabel: t.water.bars[2].sublabel, color: '#16A34A' },
+    { label: t.water.bars[0].label, value: 169, sublabel: t.water.bars[0].sublabel, color: '#FF6E00' },
+    { label: t.water.bars[1].label, value: 209, sublabel: t.water.bars[1].sublabel, color: '#2563EB' },
+    { label: t.water.bars[2].label, value: 280, sublabel: t.water.bars[2].sublabel, color: '#9CA3AF' },
+    { label: t.water.bars[3].label, value: 321, sublabel: t.water.bars[3].sublabel, color: '#16A34A' },
   ];
 
   const transportBars: BarDatum[] = [
@@ -1724,6 +1777,8 @@ export default function ErdbeereCaseStudyPage() {
           </div>
           <h2 className="text-4xl md:text-5xl font-serif tracking-tight text-charcoal italic leading-[1.1]">{t.water.h2}</h2>
           <p className="text-charcoal/70 max-w-3xl text-lg leading-relaxed">{t.water.lead}</p>
+          <p className="text-charcoal/70 max-w-3xl text-lg leading-relaxed">{t.water.grauWasserPara}</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-charcoal/30">{t.water.grauWasserSource}</p>
         </div>
         <div className="bg-white rounded-[2rem] border border-black/5 shadow-sm p-8 md:p-10 mb-10">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/30 mb-3">{t.water.chartLabel}</p>
@@ -1770,7 +1825,7 @@ export default function ErdbeereCaseStudyPage() {
           <div className="border-t border-black/5 pt-6">
             <h4 className="text-lg font-serif font-black text-charcoal mb-2">{t.water.statsBox.perKopfH3}</h4>
             <p className="text-sm text-charcoal/70 leading-relaxed mb-5">{t.water.statsBox.perKopfBody}</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
               {t.water.statsBox.perKopfRows.map((r, i) => (
                 <div key={i} className="bg-white rounded-2xl p-4 border border-black/5 shadow-sm">
                   <p className="text-xl mb-1">{r.icon}</p>
@@ -1889,6 +1944,34 @@ export default function ErdbeereCaseStudyPage() {
             </table>
           </div>
         </div>
+        {/* Cold Chain */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-serif italic text-charcoal mb-3">{t.transport.coldChainTitle}</h3>
+          <p className="text-charcoal/70 mb-6 leading-relaxed">{t.transport.coldChainLead}</p>
+          <div className="overflow-x-auto pb-2">
+            <div className="flex items-center gap-2 min-w-max">
+              {t.transport.coldChainFlow.map((step, i) => {
+                const isLast = i === t.transport.coldChainFlow.length - 1;
+                return (
+                  <div key={i} className="flex items-center gap-2">
+                    <div className="bg-sky-50 border border-sky-200 rounded-xl px-4 py-3">
+                      <p className="text-sm font-black text-sky-800 whitespace-nowrap">{step}</p>
+                    </div>
+                    {!isLast && <span className="text-charcoal/25 text-lg font-black shrink-0">→</span>}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Food Waste callout */}
+        <div className="mt-8 bg-amber-50 border border-amber-200 rounded-[1.5rem] p-8">
+          <p className="font-black text-amber-800 mb-3">{t.transport.wasteTitle}</p>
+          <p className="text-charcoal/80 leading-relaxed font-serif mb-4">{t.transport.wasteBody}</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-charcoal/30">{t.transport.wasteSource}</p>
+        </div>
+
         <div className="mt-8">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/30">{t.transport.source}</p>
         </div>
@@ -2232,8 +2315,8 @@ export default function ErdbeereCaseStudyPage() {
               ariaLabel={t.market.chartD}
               donutLabel={t.market.donutLabel}
               segments={[
-                { value: 78600, color: '#16A34A', label: t.market.donutSeg1 },
-                { value: 41750, color: '#FF6E00', label: t.market.donutSeg2 },
+                { value: 102298, color: '#16A34A', label: t.market.donutSeg1 },
+                { value: 18053, color: '#FF6E00', label: t.market.donutSeg2 },
               ]}
             />
             <p className="text-sm font-serif italic text-charcoal/60">{t.market.chartDCaption}</p>
@@ -2361,6 +2444,54 @@ export default function ErdbeereCaseStudyPage() {
           ))}
         </div>
         <p className="text-[10px] font-black uppercase tracking-[0.25em] text-charcoal/30">{t.gesamtanalyse.source}</p>
+      </Section>
+
+      {/* ── 2.8c BWL EINORDNUNG ─────────────────────────────────────── */}
+      <Section id="bwl-einordnung" className="border-t border-black/5">
+        <div className="space-y-4 mb-14">
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-burgundy">{t.bwlEinordnung.badge}</span>
+          <h2 className="text-4xl md:text-5xl font-serif tracking-tight text-charcoal italic leading-[1.1]">{t.bwlEinordnung.h2}</h2>
+          <p className="text-charcoal/70 max-w-3xl text-lg leading-relaxed">{t.bwlEinordnung.intro}</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          {t.bwlEinordnung.cards.map((card, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.4, 0, 0.2, 1] }}
+              className="bg-white rounded-[2rem] border border-black/5 shadow-sm overflow-hidden flex flex-col md:flex-row"
+            >
+              {/* Ergebnis */}
+              <div className="flex-1 bg-alabaster p-7 space-y-2">
+                <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/40">{t.bwlEinordnung.ergebnisLabel}</p>
+                <p className="font-serif text-charcoal text-base leading-snug">{card.ergebnis}</p>
+              </div>
+              {/* Arrow */}
+              <div className="flex items-center justify-center px-2 py-3 md:py-0 text-charcoal/20 text-xl font-black shrink-0 rotate-90 md:rotate-0">→</div>
+              {/* Bedeutung */}
+              <div className="flex-1 border-t md:border-t-0 md:border-l border-black/5 p-7 space-y-2 bg-burgundy/[0.03]">
+                <p className="text-[9px] font-black uppercase tracking-[0.3em] text-burgundy">{t.bwlEinordnung.bedeutungLabel}</p>
+                <p className="font-serif font-black text-charcoal text-base leading-snug">{card.bedeutung}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Fazit highlight box */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+          className="bg-burgundy text-white rounded-[2rem] p-10 shadow-xl mb-6"
+        >
+          <p className="text-[10px] font-black uppercase tracking-[0.4em] opacity-70 mb-4">{t.bwlEinordnung.fazitTitle}</p>
+          <p className="text-xl md:text-2xl font-serif italic leading-snug max-w-3xl">{t.bwlEinordnung.fazitBody}</p>
+        </motion.div>
+        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-charcoal/30">{t.bwlEinordnung.source}</p>
       </Section>
 
       {/* ── 2.9 FAZIT ───────────────────────────────────────────────── */}
